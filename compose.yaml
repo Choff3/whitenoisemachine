@@ -1,0 +1,9 @@
+services:
+  whitenoisemachine:
+    image: whitenoisemachine:latest
+    container_name: whitenoisemachine
+    restart: unless-stopped
+    devices: [/dev/snd:/dev/snd]
+    cap_add:
+      - SYS_NICE
+  
